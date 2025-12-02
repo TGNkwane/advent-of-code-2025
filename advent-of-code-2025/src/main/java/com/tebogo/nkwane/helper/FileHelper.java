@@ -28,6 +28,7 @@ public class FileHelper {
 
   private static void downloadInputFile(int day, File file) {
     try {
+      IO.println("Downloading file");
       String cookie = java.nio.file.Files.readString(new File("aoc_cookie").toPath());
 
       HttpRequest request = HttpRequest.newBuilder()
